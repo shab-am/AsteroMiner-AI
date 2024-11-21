@@ -33,25 +33,6 @@ body {
   font-style: normal;
 }
 
-.pt-serif-regular-italic {
-  font-family: "PT Serif", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.pt-serif-bold-italic {
-  font-family: "PT Serif", serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.roboto-slab-700 {
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
 /* Metallic text effects */
 .metallic-text {
   background: linear-gradient(
@@ -67,49 +48,6 @@ body {
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
   animation: shimmer 3s infinite linear;
   padding-bottom: 0.1em;
-  background-size: 100% 120%;
-  background-position: 0 -10%;
-}
-
-.metallic-text-purple {
-  background-image: linear-gradient(
-    135deg,
-    #e9d5ff 0%,
-    #452c63 45%,
-    #a855f7 55%,
-    #452c63 65%,
-    #7e22ce 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
-  animation: shine-purple 8s infinite linear;
-}
-
-/* Quotes styling */
-.special-quotes {
-  quotes: """ """ "'" "'";
-}
-
-.special-quotes q::before,
-.special-quotes q::after {
-  font-size: 2em;
-  line-height: 0;
-  position: relative;
-  color: #1c033a;
-  opacity: 0.8;
-  top: 0.3em;
-}
-
-.special-quotes q::before {
-  content: open-quote;
-  padding-right: 0.1rem;
-}
-
-.special-quotes q::after {
-  content: close-quote;
-  padding-left: 0.1rem;
 }
 
 /* Scrollbar styling */
@@ -145,24 +83,21 @@ body {
   );
 }
 
-/* Animations */
-@keyframes shimmer {
-  0% { background-position: 0 -10%; }
-  100% { background-position: 0 110%; }
+.gradient-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #f0d38c, #8b5cf6, #6b5b9a, #4f46e5, #3b82f6);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 2px transparent;
+  letter-spacing: 0.2em;
+  transform: scaleY(1.5);
 }
 
-@keyframes shine-purple {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
-
-/* Animation lock class */
-.animation-in-progress {
-  overflow: hidden !important;
-  height: 100vh !important;
-  touch-action: none !important;
-}
-
-.animation-in-progress * {
-  pointer-events: none !important;
+.host-grotesk {
+  font-family: "Host Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
